@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+
+body {
+    font-family: 'Nunito' !important;
+}
+
+/* ------------------------------------------ Disable Element Stlying ------------------------------------------ */
+.disable {
+    opacity: .5;
+    pointer-events: none;
+}
+
+/* ------------------------------------------ Anchor Element Stlying ------------------------------------------ */
+a {
+    text-decoration: none !important;
+}
+
+/* ------------------------------------------ Alert Stlying ------------------------------------------ */
+.alert {
+    border-radius: 2px !important;
+}
+
+/* ------------------------------------------ Card Stlying ------------------------------------------ */
+.card,
+.card-body {
+    border-radius: 2px !important;
+    /* background-color: red; */
+}
+
+/* ------------------------------------------ Form Stlying ------------------------------------------ */
+.form-control {
+    border-radius: 2px !important;
+}
+
+.form-select {
+    border-radius: 2px !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border-color: var(--primary) !important;
+}
+
+.form-select:focus {
+    border-color: var(--primary) !important;
+}
+
+.form-control:hover {
+    border-color: var(--primary);
+}
+
+.form-select:hover {
+    border-color: var(--primary);
+}
+
+
+/* ------------------------------------------ Border Stlying ------------------------------------------ */
+.border-primary {
+    border: 1px solid var(--primary) !important;
+}
+
+/* ------------------------------------------ Border Stlying ------------------------------------------ */
+.pagination {
+    .page-item {
+        .page-link {
+            border-radius: 2px !important;
+            margin-right: 10px;
+            box-shadow: none;
+        }
+    }
+}
+
+/* >>>>>>>>>>>>>>>>>>>> (Profile Dropdown Styling) <<<<<<<<<<<<<<<<<<<< */
+.profile-dropdown {
+    font-size: 15px !important;
+    border-radius: 2px !important;
+    a {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-radius: 6px;
+    }
+    a:hover {
+        border-color: var(--primary);
+    }
+}
+
+/* >>>>>>>>>>>>>>>>>>>> (Dropdown Styling) <<<<<<<<<<<<<<<<<<<< */
+.dropdown-menu {
+    border-radius: 2px !important;
+    .dropdown-item {
+        border-left: 4px solid transparent;
+    }
+    .dropdown-item:hover {
+        border-color: var(--primary) !important;
+    }
+}

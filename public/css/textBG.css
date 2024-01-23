@@ -1,0 +1,29 @@
+@import url('colors.css');
+
+/* ------------------------------------ Text Color ------------------------------------ */
+
+.txt-primary {
+    color: var(--primary);
+}
+
+.txt-secondary {
+    color: var(--secondary);
+}
+
+.txt-tertiary {
+    color: var(--tertiary);
+}
+
+/* ------------------------------------ Background Color ------------------------------------ */
+
+.bgcol-primary {
+    background-color: var(--primary) !important;
+}
+
+.bgcol-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.bgcol-tertiary {
+    background-color: var(--tertiary) !important;
+}

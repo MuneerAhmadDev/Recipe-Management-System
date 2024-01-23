@@ -1,0 +1,78 @@
+@import url('colors.css');
+
+/* ------------------------------------------------------------------------- Buttons Styling ------------------------------------------------------------------------- */
+.button {
+    border-radius: 2px;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.button:focus {
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.34) !important;
+}
+
+/* ------------------------------------------------ Buttons.Primary ------------------------------------------------ */
+
+.button-primary {
+    background-color: var(--primary);
+    border: 2px solid transparent;
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.button-outline-primary {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.button-outline-primary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+/* ------------------------------------------------ Buttons.Secondary ------------------------------------------------ */
+.button-secondary {
+    background-color: var(--secondary);
+    border: 2px solid transparent;
+    color: white;
+}
+
+.button-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+.button-outline-secondary {
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.button-outline-secondary:hover {
+    background-color: var(--secondary);
+    color: white;
+}
+/* ------------------------------------------------ Buttons.Tertiary ------------------------------------------------ */
+.button-tertiary {
+    background-color: var(--tertiary);
+    border: 2px solid transparent;
+    color: white;
+}
+
+.button-tertiary:hover {
+    background-color: var(--tertiary-hover);
+}
+
+.button-outline-tertiary {
+    background-color: transparent;
+    border: 2px solid var(--tertiary);
+    color: var(--tertiary);
+}
+
+.button-outline-tertiary:hover {
+    background-color: var(--tertiary);
+    color: white;
+}

@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow-y: scroll;
+}
+/* >>>>>>>>>>>>>>>>>>>> (Admin Pannel Styling) <<<<<<<<<<<<<<<<<<<< */
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--bs-secondary-bg);
+}
+/* >>>>>>>>>>>>>>>>>>>> (Sidebar Styling) <<<<<<<<<<<<<<<<<<<< */
+#sidebar {
+    max-width: 220px;
+    min-width: 220px;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: var(--primary);
+    transition: all 0.35s ease-in-out;
+    /* >>>>>>>>>>> (Sidebar header) <<<<<<<<<<<<< */
+    .sidebar-header {
+        padding: 1rem;
+        a {
+            font-weight: bold;
+            color: white;
+        }
+    }
+    /* >>>>>>>>>>> (Sidebar navigation) <<<<<<<<<<<<< */
+    .sidebar-nav {
+        padding: 0px;
+        list-style: none;
+        .sidebar-link {
+            display: block;
+            color: white;
+            margin-bottom: 4px;
+            padding: .6rem .787rem;
+        }
+        .sidebar-link:hover {
+            color: var(--primary);
+            background-color: white;
+        }
+        .sidebar-link-active {
+            color: var(--primary);
+            background-color: white;
+        }
+    }
+}
+/* >>>>>>>>>>> (Sidebar toggle) <<<<<<<<<<<<< */
+#sidebar.collapsed {
+    margin-left: -220px;
+}
+@media (max-width:767.98px) {
+    .js-sidebar {
+        margin-left: -220px;
+    }
+
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+
+    .navbar {
+        width: 100vw;
+    }
+}
+
+/* >>>>>>>>>>>>>>>>>>>> (Main Content Styling) <<<<<<<<<<<<<<<<<<<< */
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+}
+
+/* >>>>>>>>>>>>>>>>>>>> (Action Buttons Styling) <<<<<<<<<<<<<<<<<<<< */
+.action-button-animate:hover {
+    scale: 1.2;
+}
+
+/* >>>>>>>>>>>>>>>>>>>> (Container Dropdown Styling) <<<<<<<<<<<<<<<<<<<< */
+#container-col {
+    border-radius: 4px;
+}
+
+/* >>>>>>>>>>>>>>>>>>>> (Sidebar Accordin Styling) <<<<<<<<<<<<<<<<<<<< */
+.sidebar-dropdown:not(.collapsed) {
+    color: var(--primary) !important;
+    background-color: white !important;
+}
