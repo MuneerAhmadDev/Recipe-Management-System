@@ -54,6 +54,6 @@
     </section>
 
     @push('javascript')
-        <script type="module" src="{{ asset('js/loginValidation.js') }}" defer></script>
+        <script type="module" src="{{ asset('js/validations/loginValidation.js') }}" defer></script>
     @endpush
 @endsection

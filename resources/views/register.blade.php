@@ -79,6 +79,6 @@
     </section>
 
     @push('javascript')
-        <script type="module" src="{{ asset('js/signupValidation.js') }}" defer></script>
+        <script type="module" src="{{ asset('js/validations/signupValidation.js') }}" defer></script>
     @endpush
 @endsection

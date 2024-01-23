@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Settings\BannerController;
 use App\Http\Controllers\Admin\Settings\SettingController;
 use App\Http\Controllers\Admin\Users\UserController;
@@ -18,6 +19,9 @@ Route::middleware(['auth', 'verified', 'can:isAdmin'])->group(function () {
             ->name('users.show');
         Route::delete('/user/{id}', [UserController::class, 'destroy'])
             ->name('users.destroy');
+
+        // >>>>>>>>>>>>>>>>>>>>>>>>>> Category Routes <<<<<<<<<<<<<<<<<<<<
+        Route::resource('category', CategoryController::class);
 
         // >>>>>>>>>>>>>>>>>>>>>>>>>> Settings Routes <<<<<<<<<<<<<<<<<<<<
         Route::resource('settings', SettingController::class)

@@ -23,6 +23,14 @@
                     Users
                 </a>
             </li>
+            {{-- Category Link --}}
+            <li class="sidebar-item">
+                <a href="{{ route('category.index') }}"
+                    class="sidebar-link {{ ((Route::currentRouteName() === 'category.index' ? 'sidebar-link-active' : '' || Route::currentRouteName() === 'category.create') ? 'sidebar-link-active' : '' || Route::currentRouteName() === 'category.edit') ? 'sidebar-link-active' : '' }}">
+                    <i class="fa-solid fa-boxes-stacked pe-2"></i>
+                    Category
+                </a>
+            </li>
             {{-- Settings Link --}}
             <li class="sidebar-item">
                 <a class="sidebar-link collapsed sidebar-dropdown {{ (Route::currentRouteName() === 'settings.edit' ? 'sidebar-link-active' : '' || Route::currentRouteName() === 'banner.create') ? 'sidebar-link-active' : '' }}"

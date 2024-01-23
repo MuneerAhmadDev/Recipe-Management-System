@@ -1,6 +1,6 @@
-import { validateEmail } from "./validateEmail.js";
-import { generateErrorMessage } from "./generateErrorMessage.js";
-import { removeErrorMessage } from "./removeErrorMessage.js";
+import { validateEmail } from "./emailValidations/validateEmail.js";
+import { generateErrorMessage } from "../errors/generateErrorMessage.js";
+import { removeErrorMessage } from "../errors/removeErrorMessage.js";
 
 const userName = document.getElementById('userName');
 const userEmail = document.getElementById('userEmail');

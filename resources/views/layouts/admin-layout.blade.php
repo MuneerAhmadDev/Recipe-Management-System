@@ -26,6 +26,10 @@
 
             @yield('users')
 
+            @yield('category')
+            @yield('add-category')
+            @yield('update-category')
+
             @yield('profile')
             @yield('password')
 
@@ -34,9 +38,9 @@
         </div>
     </div>
 
-    @stack('javascript')
     <script src="{{ asset('js/sidebarToggle.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
+    @stack('javascript')
 </body>
 
 </html>
