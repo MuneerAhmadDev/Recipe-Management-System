@@ -1,5 +1,8 @@
 <div class="table-responsive">
-    <table class="table-striped table">
+    <table {{ $attributes->merge([
+        'class' => 'table-striped table',
+        'id' => '',
+    ]) }}>
         {{ $slot }}
     </table>
 </div>

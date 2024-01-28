@@ -12,7 +12,7 @@
     <x-admin-components.container>
         {{-- Content Heading --}}
         <x-headings.content-heading>
-            <x-admin-components.buttons.add-button href="{{ route('category.create') }}" /> All Categories
+            <x-buttons.add-button href="{{ route('category.create') }}" /> All Categories
         </x-headings.content-heading>
 
         {{-- Search Form --}}
@@ -21,9 +21,7 @@
         {{-- All Categories --}}
         <div class="row px-2">
             @if (count($categories) === 0)
-                <div class="alert alert-warning" role="alert">
-                    No record found.
-                </div>
+                <x-alerts.no-record-found />
             @else
                 @foreach ($categories as $category)
                     <div class="col-md-6 mt-2">
@@ -54,9 +52,9 @@
                                         </div>
                                         {{-- Action Buttons --}}
                                         <div class="card-text d-flex mt-1">
-                                            <x-admin-components.buttons.update-button
+                                            <x-buttons.update-button
                                                 href="{{ route('category.edit', ['category' => $category->id]) }}" />
-                                            <x-admin-components.buttons.delete-button
+                                            <x-buttons.delete-button
                                                 route="{{ route('category.destroy', ['category' => $category->id]) }}" />
                                         </div>
                                     </div>

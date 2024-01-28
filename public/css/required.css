@@ -24,7 +24,6 @@ a {
 .card,
 .card-body {
     border-radius: 2px !important;
-    /* background-color: red; */
 }
 
 /* ------------------------------------------ Form Stlying ------------------------------------------ */
@@ -38,7 +37,6 @@ a {
 
 .form-control:focus {
     box-shadow: none !important;
-    border-color: var(--primary) !important;
 }
 
 .form-select:focus {

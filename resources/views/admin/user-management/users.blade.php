@@ -40,12 +40,11 @@
                                 <td> {{ $user->email }} </td>
                                 <td> {{ $user->profession }} </td>
                                 <td class="text-center">
-                                    <x-admin-components.buttons.view-button
-                                        href="{{ route('users.show', ['id' => $user->id]) }}" />
+                                    <x-buttons.view-button href="{{ route('users.show', ['id' => $user->id]) }}" />
                                 </td>
                                 <td class="text-center">
                                     @if ($user->role !== 'admin')
-                                        <x-admin-components.buttons.delete-button
+                                        <x-buttons.delete-button
                                             route="{{ route('users.destroy', ['id' => $user->id]) }}" />
                                     @endif
                                 </td>

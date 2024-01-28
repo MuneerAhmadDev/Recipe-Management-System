@@ -1,7 +1,9 @@
-<form action="{{ $action }}" method="{{ $method }}" enctype="multipart/form-data"
+<form enctype="multipart/form-data"
     {{ $attributes->merge([
         'class' => '',
         'id' => '',
+        'action' => '',
+        'method' => '',
     ]) }}>
     @csrf
     {{ $slot }}

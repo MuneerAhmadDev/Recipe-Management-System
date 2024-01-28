@@ -86,8 +86,17 @@ body {
     border-radius: 4px;
 }
 
-/* >>>>>>>>>>>>>>>>>>>> (Sidebar Accordin Styling) <<<<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>>>> (Sidebar dropdown Styling) <<<<<<<<<<<<<<<<<<<< */
 .sidebar-dropdown:not(.collapsed) {
     color: var(--primary) !important;
     background-color: white !important;
+}
+
+/* >>>>>>>>>>>>>>>>>>>> (Form Modal Styling) <<<<<<<<<<<<<<<<<<<< */
+@media screen and (min-width: 768px) {
+    #formModal {
+        .modal-content {
+            width: 36rem;
+        }
+    }
 }

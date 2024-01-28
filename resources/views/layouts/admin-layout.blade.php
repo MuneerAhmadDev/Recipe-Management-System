@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/required.css') }}">
     <link rel="stylesheet" href="{{ asset('css/colors.css') }}">
     <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
@@ -30,6 +31,10 @@
             @yield('add-category')
             @yield('update-category')
 
+            @yield('cuisine')
+            @yield('add-cuisine')
+            @yield('update-cuisine')
+
             @yield('profile')
             @yield('password')
 
@@ -39,8 +44,17 @@
     </div>
 
     <script src="{{ asset('js/sidebarToggle.js') }}" defer></script>
+    <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
     @stack('javascript')
+
 </body>
 
 </html>

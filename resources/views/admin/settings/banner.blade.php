@@ -33,15 +33,13 @@
             <div class="col-md-8 p-3">
                 <h4 class="txt-primary fw-bold mb-5 text-center">Banner Images</h4>
                 @if (count($bannerImages) === 0)
-                    <div class="alert alert-warning" role="alert">
-                        No record found.
-                    </div>
+                    <x-alerts.no-record-found />
                 @else
                     @foreach ($bannerImages as $bannerImage)
                         <div class="bg-light d-flex justify-content-between align-items-center mb-4 p-3">
                             <img src="{{ asset('storage/settings/banner/' . $bannerImage->banner_image) }}"
                                 alt="Banner Image" style="width: 60%;">
-                            <x-admin-components.buttons.delete-button
+                            <x-buttons.delete-button
                                 route="{{ route('banner.destroy', ['banner' => $bannerImage->id]) }}" />
                         </div>
                     @endforeach

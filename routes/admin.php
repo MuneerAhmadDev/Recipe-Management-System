@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Category\CategoryController;
+use App\Http\Controllers\Admin\Recipe\CuisineController;
 use App\Http\Controllers\Admin\Settings\BannerController;
 use App\Http\Controllers\Admin\Settings\SettingController;
 use App\Http\Controllers\Admin\Users\UserController;
@@ -21,7 +22,11 @@ Route::middleware(['auth', 'verified', 'can:isAdmin'])->group(function () {
             ->name('users.destroy');
 
         // >>>>>>>>>>>>>>>>>>>>>>>>>> Category Routes <<<<<<<<<<<<<<<<<<<<
-        Route::resource('category', CategoryController::class);
+        Route::resource('category', CategoryController::class)
+            ->except('show');
+
+        Route::resource('cuisine', CuisineController::class);
+
 
         // >>>>>>>>>>>>>>>>>>>>>>>>>> Settings Routes <<<<<<<<<<<<<<<<<<<<
         Route::resource('settings', SettingController::class)

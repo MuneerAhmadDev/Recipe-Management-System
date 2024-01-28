@@ -15,6 +15,7 @@
                     Dashboard
                 </a>
             </li>
+
             {{-- Users Link --}}
             <li class="sidebar-item">
                 <a href="{{ route('users.index') }}"
@@ -23,14 +24,28 @@
                     Users
                 </a>
             </li>
-            {{-- Category Link --}}
-            <li class="sidebar-item">
-                <a href="{{ route('category.index') }}"
-                    class="sidebar-link {{ ((Route::currentRouteName() === 'category.index' ? 'sidebar-link-active' : '' || Route::currentRouteName() === 'category.create') ? 'sidebar-link-active' : '' || Route::currentRouteName() === 'category.edit') ? 'sidebar-link-active' : '' }}">
-                    <i class="fa-solid fa-boxes-stacked pe-2"></i>
-                    Category
+
+            {{-- Recipe Links --}}
+            <li class="sidebar-item mb-1">
+                <a class="sidebar-link collapsed sidebar-dropdown {{ (Route::currentRouteName() === 'category.index' ? 'sidebar-link-active' : '') || (Route::currentRouteName() === 'category.create' ? 'sidebar-link-active' : '') || (Route::currentRouteName() === 'category.edit' ? 'sidebar-link-active' : '') || (Route::currentRouteName() === 'cuisine.index' ? 'sidebar-link-active' : '') || (Route::currentRouteName() === 'cuisine.create' ? 'sidebar-link-active' : '') || Route::currentRouteName() === 'cuisine.edit' ? 'sidebar-link-active' : '' }}"
+                    data-bs-toggle="collapse" href="#category-target">
+                    <i class="fa-solid fa-utensils me-2"></i>
+                    Recipe
                 </a>
+                <div class="collapse" id="category-target">
+                    <div class="card card-body">
+                        <a class="txt-secondary {{ (Route::currentRouteName() === 'category.index' ? 'sidebar-link-active' : '') || (Route::currentRouteName() === 'category.create' ? 'sidebar-link-active' : '') || Route::currentRouteName() === 'category.edit' ? 'sidebar-link-active' : '' }} mb-2"
+                            href="{{ route('category.index') }}">
+                            <i class="fa-solid fa-box me-2"></i> Category
+                        </a>
+                        <a class="txt-secondary {{ (Route::currentRouteName() === 'cuisine.index' ? 'sidebar-link-active' : '') || (Route::currentRouteName() === 'cuisine.create' ? 'sidebar-link-active' : '') || Route::currentRouteName() === 'cuisine.edit' ? 'sidebar-link-active' : '' }} mb-2"
+                            href="{{ route('cuisine.index') }}">
+                            <i class="fa-solid fa-gear me-2"></i> Cusisine
+                        </a>
+                    </div>
+                </div>
             </li>
+
             {{-- Settings Link --}}
             <li class="sidebar-item">
                 <a class="sidebar-link collapsed sidebar-dropdown {{ (Route::currentRouteName() === 'settings.edit' ? 'sidebar-link-active' : '' || Route::currentRouteName() === 'banner.create') ? 'sidebar-link-active' : '' }}"
